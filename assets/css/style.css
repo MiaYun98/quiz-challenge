@@ -5,16 +5,56 @@
     padding: 0;
   }
 
+header {
+    margin: 2%;
+    text-align: left;
+}
+
 body {
     text-align: center;
-    margin: 100px;
+}
+
+button {
+    margin: 20px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #ff7034;
+    color: white;
+    font-size: 20px;
+}
+
+h1 {
+    margin: 2.5%;
+}
+
+div {
+    list-style: none;
+}
+
+ol {
+    width: 40%;
+    background-color: bisque;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 2.5%;
 }
 
 li {
-    margin: 10px; 
+    margin: 30px; 
     font-size: 20px;
     font-weight: 400;
-    list-style: none;
+}
+
+p {
+    margin: 30px; 
+    font-size: 20px;
+    font-weight: 400;
+}
+
+input {
+    font-size: 35px;
+    margin: 50px;
 }
 
 .timer {
@@ -22,3 +62,9 @@ li {
     margin: 50px;
 }
 
+.hidden {
+    display: none;
+}
+
+
+/* hover effect? */

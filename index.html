@@ -8,16 +8,43 @@
     <title>Quiz-Challenge</title>
   </head>
   <body>
-    <h3 class = timer> 100 seconds remaining</h3>
-    <h1 id = "question">Click to start!</h1>
-    <ol class = "selection">   
-        <li class = "box" data-state = "unchoose">This is the quiz about the Linguistic Knowledge</li>
-        <li class = "box" data-state = "unchoose">When you are ready click the button it starts!</li>
-        <li class = "box" data-state = "unchoose">It is about the Linguistic Knowledge combined with syntax and phonology</li>
-        <li class = "box" data-state = "unchoose">Good Luck!</li>
-    </ol>
-
-    <button id = "start">Start</button>
-    <script src="./assets/js/script.js"></script>
+    <!-- this should go with the bottom record should load same thing -->
+    <header>
+      <button class = "record toprecord">Record</button>
+    </header>
+    <!-- this is the setting for the preset -->
+    <main>
+      <h3 class = timer> 50 seconds remaining</h3>
+      <h1 id = "question">Click to start!</h1>
+        <div class = "discription">
+          <p>This is the quiz has 5 Trick Questions</p>
+          <p>When you are ready click the button to starts!</p>
+          <p>You should think Carefully</p>
+          <p>Good Luck!</p>
+        </div>
+      <!-- Question starts -->
+      <ol class = "selection">   
+          <li class = "box" data-state = '1'></li>
+          <li class = "box" data-state = "2"></li>
+          <li class = "box" data-state = "3"></li>
+          <li class = "box" data-state = "4"></li>
+          <p class = "answer"></p>
+      </ol>
+      <button id = "start">Start</button>
+    </main>  
+    <!-- button group -->
+    <nav class = "result">
+      <p>Please enter your Initial to save the result</p>
+      <input type="text" name ="Initial" value="">    
+      <section>
+        <button class = "record">Record</button>
+        <button class = "save">Save</button>
+      </section> 
+    </nav>
+    <!-- here is going to be the record page loading  -->
+    <script>
+      
+    </script>
   </body>
+  <script src="./assets/js/script.js"></script>
 </html>
