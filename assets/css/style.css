@@ -66,5 +66,6 @@ input {
     display: none;
 }
 
-
-/* hover effect? */
+#scorelist {
+    list-style: none;
+}
