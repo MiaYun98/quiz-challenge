@@ -54,7 +54,7 @@ This Homework was about the Local Storage and the coding with the JavaScript
 
 ## Live Website 
 
-![](assets/images/live%20picture.png)
+![](assets/images/6vnepw.gif)
 
 # Contact 
 
