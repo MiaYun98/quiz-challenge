@@ -1,5 +1,4 @@
 // variables for the questions and answer generater
-// var boxEl = document.querySelectorAll(".box");
 var selectEl = document.querySelector(".selection");
 var questionEl = document.querySelector("#question");
 var timerEl = document.querySelector(".timer");
@@ -7,11 +6,9 @@ var startEl = document.querySelector(".start");
 var boxEl = document.querySelectorAll("li");
 var resultEl = document.querySelector(".result");
 var recordPageEl = document.querySelector("#recordPage");
-var recordEl = document.querySelector("#record");
 var saveEl = document.querySelector("#save");
 var nameEl = document.querySelector("#name-input");
 var scorelistEl = document.querySelector("#scorelist");
-// var recordPage = document.querySelector("#recordPage");
 var historyName = [];
 var historyScore = [];
 var timer = 50;
@@ -58,7 +55,7 @@ function result() {
 //fucntion for submitting the data when it click and JSON stringfy the score
 function submit() {
   var score = timer;
-  var name = nameEl.value;
+  var name = nameEl.value.trim();
   if (name === "") {
     return;
   }
@@ -73,6 +70,7 @@ function submit() {
   recordlist();
 }
 
+// store data in local storage
 function storeScore() {
   localStorage.setItem("historyName", JSON.stringify(historyName));
   localStorage.setItem("historyScore", JSON.stringify(historyScore));
@@ -81,7 +79,7 @@ function storeScore() {
 //record page
 function recordlist() {
   recordPageEl.classList.remove("hidden");
-  // resultEl.classList.add("hidden");
+  resultEl.classList.add("hidden");
   scorelistEl.textContent = "";
   for (var i = 0; i < historyName.length; i++) {
     var initial = historyName[i];
@@ -95,6 +93,7 @@ function recordlist() {
   }
 }
 
+//button for the top record button
 function topRecord() {
   document.querySelector(".front").classList.add("hidden");
   historyName = JSON.parse(localStorage.getItem("historyName"));
@@ -103,6 +102,7 @@ function topRecord() {
   recordlist();
 }
 
+// reset the variables in the local storage and regen the list
 function reset() {
   historyName = [];
   historyScore = [];
@@ -110,9 +110,11 @@ function reset() {
   recordlist();
 }
 
+// reloading the page
 function reload() {
   document.location.reload();
 }
+
 //click for the solving the quiz
 selectEl.addEventListener("click", function (event) {
   var element = event.target;
@@ -170,7 +172,6 @@ resultEl.classList.add("hidden");
 selectEl.classList.add("hidden");
 recordPageEl.classList.add("hidden");
 saveEl.addEventListener("click", submit);
-recordEl.addEventListener("click", recordlist);
 document.querySelector(".record").addEventListener("click", topRecord);
 document.querySelector("#reset").addEventListener("click", reset);
 document.querySelector("#restart").addEventListener("click", reload);
